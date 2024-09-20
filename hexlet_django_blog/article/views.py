@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.shortcuts import render
 
-def index(request):
-    return HttpResponse('article')
+def article(request):
+    return render(request, 'article.html', context={'tags':1})
